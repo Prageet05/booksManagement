@@ -2,7 +2,6 @@ const { default: mongoose } = require("mongoose");
 const ObjectId = mongoose.Schema.Types.ObjectId
 
 const bookSchema = new mongoose.Schema({
-
   title: { 
     type: String, 
     unique: true,
@@ -53,4 +52,4 @@ const bookSchema = new mongoose.Schema({
 
 },{ timestamps: true });
 
-module.exports = mongoose.model("Pbook", bookSchema)
+module.exports = mongoose.model("Pbook" ,bookSchema)

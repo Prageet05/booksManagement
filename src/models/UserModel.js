@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const ObjectId = mongoose.Schema.Types.ObjectId
-const userSchema = new mongoose.Schema({
 
+const userSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
     },
     name: {
         type: String,
-        required: true 
+        required: true
     },
     phone: {
         type: String,
@@ -25,13 +25,13 @@ const userSchema = new mongoose.Schema({
     },
     password: {
         type: String,
-        required:true,
+        required: true,
         // length: { minLen: 8, maxLen: 15 }
     },
     address: {
-        street: { type:String },
-        city: {  type:String },
-        pincode: {  type:String }
+        street: { type: String },
+        city: { type: String },
+        pincode: { type: String }
     }
 }, { timestamps: true })
 module.exports = mongoose.model('Puser', userSchema)
